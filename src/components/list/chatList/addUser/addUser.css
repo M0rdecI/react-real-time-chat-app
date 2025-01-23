@@ -1,0 +1,67 @@
+.addUser{
+    width: max-content;
+    height: max-content;
+    margin: auto;
+    padding: 1.6rem;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(12, 18, 29, 0.73);
+
+    form{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        input{
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background-color: rgba(188, 198, 214, 0.911);
+            color: #040e25f9;
+        }
+        button{
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background-color: rgb(15, 79, 189);
+            color: #fff;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                background-color: rgba(32, 46, 71, 0.8);
+            }
+        }
+    }
+    .user{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+        .details{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            img{
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        button{
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background-color: rgba(32, 46, 71, 0.5);
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}

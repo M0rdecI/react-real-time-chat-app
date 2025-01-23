@@ -1,0 +1,167 @@
+.chat{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    height: 100%;
+    
+    .chat-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        .chat-header-left{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            
+            .chat-header-avatar{
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            .texts{
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                
+                .chat-header-name{
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                }
+                .chat-header-status{
+                    font-size: 0.8rem;
+                    color: #8e8e8e;
+                }
+            }
+        }
+        .chat-header-right{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            
+            .chat-header-icon{
+                width: 1.2rem;
+                height: 1.2rem;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .chat-body{
+        flex: 1;
+        overflow-y: auto;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        transition: all 0.2s;
+        .chat-body-message{
+            max-width: 70%;
+            display: flex;
+            gap: 1rem; 
+            &.sent{
+                align-self: flex-end;
+                .chat-body-message-text{
+                    p{
+                        background-color: rgba(55, 55, 238, 0.883);
+                    }
+                    span{
+                        align-self: flex-end;
+                    }
+                }
+            }
+            .chat-body-message-text{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5px;
+
+                p{
+                    padding: 1rem;
+                    background-color: rgba(33, 30, 46, 0.957);
+                    border-radius: 1rem;
+                }
+                span{
+                    font-size: 0.8rem;
+                    padding: 0.5rem;
+                }
+            }
+            .chat-body-message-avatar{
+                width: 3rem;
+                height: 3rem;
+                border-radius: 50%;
+            }
+            img{
+                width: 100%;
+                height: 250px;
+                border-radius: 1rem;
+                object-fit: cover;
+            } 
+            
+        }
+    }
+
+    .chat-footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        
+        img{
+            width: 1.2rem;
+            height: 1.2rem;
+            cursor: pointer;
+        }
+        .chat-footer-icon-container{
+            display: flex;
+            gap: 1rem;
+        }
+        
+        input{
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0);
+            border: none;
+            outline: none;
+            color: #fff;
+            font-size: 1rem;
+            padding: 1rem;
+            border-radius: 1rem;
+            transition: background-color 0.2s;
+        }
+        
+        input:focus{
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .emoji{
+            position: relative;
+            
+            .emoji-picker{
+                position: absolute;
+                bottom: 3rem;
+                right: 0;
+                z-index: 1;
+            }
+        }
+        
+        .sendBtn{
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            background-color: rgba(1, 191, 4, 0.85);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.1s;
+            &:hover{
+                background-color: rgb(1, 191, 4);
+            }
+        }
+    }
+}

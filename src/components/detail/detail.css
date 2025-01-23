@@ -1,0 +1,93 @@
+.detail{
+    flex: 1;
+    .user{
+        padding: 1.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0.7rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    .option{
+        padding: 0.6rem;
+        .title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;            
+            img{
+                height: 1.2rem;
+                border-radius: 50%;
+                width: 1.2rem;
+                cursor: pointer;
+                padding: 0.1rem;
+                border-bottom: 1px solid rgba(12, 12, 12, 0.571);
+            }
+        }
+    }
+    .photos{
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-top: 1rem;
+        .photoItems{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .photoDetails{
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                img{
+                    width: 3.2rem;
+                    height: 3.2rem;
+                    border-radius: 0.5rem;
+                    object-fit: cover;
+                }
+                span{
+                    font-size: 0.8rem;
+                    color: rgba(255, 255, 255, 0.5);
+                }
+            }
+        }
+        .download{
+            height: 1.2rem;
+            border-radius: 10%;
+            width: 1.2rem;
+            cursor: pointer;
+            padding: 0.1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    }
+    button{
+        padding: 0.5rem 1rem;
+        border: none;
+        background-color: rgba(136, 13, 13, 0.407);
+        color: white;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        &:hover{
+            background-color: rgba(210, 12, 12, 0.867);
+        }
+        &.logout{
+            background-color: rgba(0, 98, 255, 0.407);
+            &:hover{
+                background-color: rgba(0, 98, 255, 0.867);
+            }
+        }
+    }
+}
